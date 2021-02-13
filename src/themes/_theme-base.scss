@@ -1,0 +1,15 @@
+@import "core";
+@import "variables";
+$theme-key-name: 'dark' !default;
+/**@theme:#{$theme-key-name}*/
+
+// bootstrap colors map, evey key in it will create classes like btn-* text-* bg-*
+$colors: get_theme_colors($theme-key-name, $custom-theme-colors);
+
+// we will use it in overrides.scss file
+$theme-custom: get_theme_colors($theme-key-name, $vars-theme-customs);
+
+@import "overrides";
+
+// import bootstrap entry point that will create classes based in our variables.
+@import "~bootstrap/scss/bootstrap";

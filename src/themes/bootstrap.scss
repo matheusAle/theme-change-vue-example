@@ -1,0 +1,13 @@
+@import "core";
+@import "variables";
+@import "~bootstrap/scss/variables";
+
+html, body {
+  font-size: $font-size-root !important;
+  font-family: $font-family-sans-serif !important;
+}
+
+
+input::placeholder {
+  font-family: $font-family-sans-serif !important;
+}

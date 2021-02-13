@@ -1,0 +1,25 @@
+
+
+$theme-custom: () !default;
+$theme-gradients: () !default;
+
+$blue:    color(blue);
+$indigo:  color(indigo);
+$purple:  color(purple);
+$pink:    color(pink);
+$red:     color(red);
+$orange:  color(orange);
+$yellow:  color(yellow);
+$green:   color(green);
+$teal:    color(teal);
+$cyan:    color(cyan);
+
+$theme-colors: $colors;
+
+$body-bg:      color(my-bg);
+$body-color:   color(my-text);
+
+$text-muted:   color(emphasis-low);
+
+$border-color: color(border);
+$hr-color:     color(divider);

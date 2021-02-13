@@ -1,0 +1,44 @@
+$custom-theme-colors: (
+    'my-bg':            ('dark': #323232, 'light': #e7e7e7, 'navy': #372a51),
+    'my-text':            ('dark': #e3e3e3, 'light': #565656, 'navy': #c3c3c3),
+    'red':              ('dark': #E9787A, 'light': #eb4040, 'navy': #E9787A),
+    'pink':             ('dark': #943152, 'light': #e7346e, 'navy': #cd3970),
+    'purple':           ('dark': #BA69C9, 'light': #9C28B1, 'navy': #BA69C9),
+    'purple-2':         ('dark': #9D7CDC, 'light': #7241CC, 'navy': #9D7CDC),
+    'indigo':           ('dark': #7A87CC, 'light': #4052B6, 'navy': #7A87CC),
+    'blue':             ('dark': #5CB1FF, 'light': #048BF6, 'navy': #5CB1FF),
+    'blue-2':           ('dark': #43C0FF, 'light': #00B1FF, 'navy': #43C0FF),
+    'blue-dark':        ('dark': #1D72D8, 'light': #1D72D8, 'navy': #1D72D8),
+    'blue-light':       ('dark': #3888FF, 'light': #3888FF, 'navy': #3888FF),
+    'teal':             ('dark': #7CDFE6, 'light': #00C6D5, 'navy': #7CDFE6),
+    'cyan':             ('dark': #4FCFD7, 'light': #05ACB7, 'navy': #4FCFD7),
+    'green':            ('dark': #72C392, 'light': #53B67D, 'navy': #72C392),
+    'green-2':          ('dark': #9CCB63, 'light': #8BC248, 'navy': #9CCB63),
+    'green-3':          ('dark': #CDDC3B, 'light': #C7D048, 'navy': #CDDC3B),
+    'green-4':          ('dark': #5EE7BF, 'light': #5EE7BF, 'navy': #5EE7BF),
+    'green-dark':       ('dark': #008879, 'light': #008879, 'navy': #008879),
+    'green-light':      ('dark': #10d0bb, 'light': #10d0bb, 'navy': #10d0bb),
+    'yellow':           ('dark': #FFD83A, 'light': #FABF2B, 'navy': #FFD83A),
+    'orange':           ('dark': #FFA826, 'light': #FF9700, 'navy': #FFA826),
+    'orange-2':         ('dark': #FF8D5B, 'light': #FF5C00, 'navy': #FF8D5B),
+
+);
+
+$vars-theme-customs: (
+        'input-bg':                               ('dark': #444A58, 'light': #FFFFFF, 'navy': #32425A),
+        'input-focus-bg':                         ('dark': #444A58, 'light': #FFFFFF, 'navy': #32425A),
+        'custom-control-indicator-checked-bg':    ('dark': #FFFFFF, 'light': #008879, 'navy': #FFFFFF),
+        'custom-control-indicator-checked-color': ('dark': #000000, 'light': #FFFFFF, 'navy': #000000),
+        'custom-radio-indicator-checked-bg':      ('dark': #02AF9C, 'light': #02AF9C, 'navy': #02AF9C),
+        'custom-radio-indicator-checked-color':   ('dark': #FFFFFF, 'light': #FFFFFF, 'navy': #FFFFFF)
+);
+
+
+@function get_theme_colors($theme, $map) {
+  $colors: ();
+  @each $color, $themes in $map {
+    $colors: map_merge($colors, ($color: map_get($themes, $theme)))
+  }
+
+  @return $colors;
+}
